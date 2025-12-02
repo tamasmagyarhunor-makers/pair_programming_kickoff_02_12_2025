@@ -26,6 +26,7 @@ def fizzbuzz(number):
 ### examples
 ```python
 from lib.fizzbuzz import fizzbuzz
+import pytest
 
 """
 returns fizz if called with 3
@@ -58,6 +59,16 @@ actual = fizzbuzz(8)
 expected = 8
 
 assert actual == expected
+
+"""
+raise Error when input not int
+"""
+with pytest.raises(TypeError) as error:
+    fizzbuzz("test")
+actual = error.value
+expected = "Input can only be integer!"
+
+assert str(actual) == expected
 
 
 ```
