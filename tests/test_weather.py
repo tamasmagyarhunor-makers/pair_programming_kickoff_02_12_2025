@@ -1,3 +1,5 @@
+from lib.weather import *
+
 
 def test_returns_take_the_sunglasses_when_called_with_sunny():
     """
@@ -5,5 +7,14 @@ def test_returns_take_the_sunglasses_when_called_with_sunny():
     """
     actual = weather('sunny')
     expected = 'Take the sunglasses!'
+
+    assert actual == expected
+
+def test_returns_take_the_raincoat_when_called_with_rainy():
+    """
+    Returns 'Take the raincoat!' when called with 'rainy'
+    """
+    actual = weather('rainy')
+    expected = 'Take the raincoat!'
 
     assert actual == expected
