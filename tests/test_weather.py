@@ -18,3 +18,12 @@ def test_returns_take_the_raincoat_when_called_with_rainy():
     expected = 'Take the raincoat!'
 
     assert actual == expected
+
+def test_returns_weather_not_recognised_when_not_rainy_or_sunny():
+    """
+    Returns 'Weather not recognised' when called with neither 'rainy' or 'sunny'
+    """
+    actual = weather('muddy')
+    expected = 'Weather not recognised'
+
+    assert actual == expected
