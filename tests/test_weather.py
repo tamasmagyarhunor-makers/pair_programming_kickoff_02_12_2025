@@ -1,4 +1,5 @@
 from lib.weather import *
+import pytest
 
 
 def test_returns_take_the_sunglasses_when_called_with_sunny():
@@ -27,3 +28,15 @@ def test_returns_weather_not_recognised_when_not_rainy_or_sunny():
     expected = 'Weather not recognised'
 
     assert actual == expected
+
+def test_raises_typeerror_when_called_with_not_string():
+    """
+    Raises TypeError when called with not string
+    """
+    with pytest.raises(TypeError) as e:
+        actual = weather(2)
+
+    actual = e.value
+    expected = 'Weather not recognised'
+
+    assert str(actual) == expected

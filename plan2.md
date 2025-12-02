@@ -54,7 +54,7 @@ assert actual == expected
 Raises TypeError when called with not string
 """
 with pytest.raises(TypeError) as e:
-  actual = weather('muddy')
+  actual = weather(2)
 
 actual = e.value
 expected = 'Weather not recognised'
