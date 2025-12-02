@@ -37,6 +37,6 @@ def test_raises_typeerror_when_called_with_not_string():
         actual = weather(2)
 
     actual = e.value
-    expected = 'Weather not recognised'
+    expected = 'Input must be a string!'
 
     assert str(actual) == expected
